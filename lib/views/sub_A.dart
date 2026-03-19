@@ -4,14 +4,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 class SubA extends StatefulWidget {
   const SubA({super.key});
-
   @override
   State<SubA> createState() => _SubAState();
 }
-
 class _SubAState extends State<SubA> {
-
-
   Future<void> _makePhoneCall(String phoneNumber) async {
     final Uri launchUri = Uri(
       scheme: 'tel',
@@ -19,7 +15,6 @@ class _SubAState extends State<SubA> {
     );
     await launchUrl(launchUri);
   }
-
   List<Trasport> trasportdata = [
     Trasport(
       image:"assets/images/DRR.jpg",
@@ -67,7 +62,6 @@ class _SubAState extends State<SubA> {
       phone: "1690"
     ),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,8 +85,6 @@ class _SubAState extends State<SubA> {
               ),
             ),
             ListView.separated(
-              
-              
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               itemCount: trasportdata.length,
@@ -129,7 +121,6 @@ class _SubAState extends State<SubA> {
                         trasportdata[index].image!,
                         fit: BoxFit.cover ,
                         ),
-                      
                   ),
                   title: Text(
                     trasportdata[index].name!,
@@ -147,8 +138,7 @@ class _SubAState extends State<SubA> {
                 );
               },
              )
-          ],
-            
+          ],   
           ),
         ),
       ),
